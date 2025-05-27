@@ -11,9 +11,9 @@ window.updateLoginSignupLogoutButtons = () => {
         localStorage.removeItem('cart'); 
         window.updateCartCount();   
         const currentPathname = window.location.pathname;
-        const goToHome = currentPathname.includes('/Home/') ||  currentPathname.includes('/products/') || currentPathname.includes('/cart/') || currentPathname.includes('/My-Orders/')
-            ? '../Home/Home.html'
-            : 'Home.html';
+        const goToHome = currentPathname.includes('/index.html/') ||  currentPathname.includes('/products/') || currentPathname.includes('/cart/') || currentPathname.includes('/My-Orders/')
+            ? '../index.html'
+            : 'index.html';
 
         window.location.href = goToHome;
     };
@@ -27,8 +27,8 @@ window.updateLoginSignupLogoutButtons = () => {
         } else {
             offcanvasContainer.innerHTML = `
                 <ul class="form-register">
-                    <li><a href="../login/login.html" class="btn btn-dark-outline btn-lg">Login</a></li>
-                    <li><a href="../Sign Up.html" class="btn btn-dark-outline btn-lg">Sign Up</a></li>
+                    <li><a href="login/login.html" class="btn btn-dark-outline btn-lg">Login</a></li>
+                    <li><a href="Sign Up/Sign Up.html" class="btn btn-dark-outline btn-lg">Sign Up</a></li>
                 </ul>
             `;
         }
@@ -60,7 +60,7 @@ window.updateCartCount = () => {
 
 window.getDetails = (id) => {
     localStorage.setItem('productId', id);
-    window.location.href = '../products/Product.html';
+    window.location.href = 'products/Product.html';
 };
 
 window.addToCart = (id) => {
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.classList.remove('active');
         const linkPath = link.getAttribute('href')?.split('/').pop();
 
-        if ((currentPath === '' || currentPath === 'Sign Up.html' || currentPath === 'Home.html') && linkPath === 'Home.html') {
+        if ((currentPath === '' || currentPath === 'Sign Up.html' || currentPath === 'index.html') && linkPath === 'index.html') {
             link.classList.add('active');
         } else if (linkPath && linkPath === currentPath) {
             link.classList.add('active');

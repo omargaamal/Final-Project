@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
          
             const currentPathname = window.location.pathname;
             const goToHome = currentPathname.includes('/order-confirmation.html')
-                ? '../Home/Home.html' 
-                : 'Home.html';  
+                ? '../index.html' 
+                : 'index.html';  
             window.location.href = goToHome;
         }
     }, 1000); 

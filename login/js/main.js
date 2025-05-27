@@ -18,7 +18,7 @@ loginForm?.addEventListener('submit', (e) => {
         if (typeof updateLoginLogoutButtons === 'function') {
             updateLoginLogoutButtons(); 
         }
-        window.location.href = '../Home/Home.html'; 
+        window.location.href = '../index.html'; 
 }
 });
 
@@ -36,6 +36,6 @@ if (logoutButton) {
         if (typeof updateLoginLogoutButtons === 'function') {
             updateLoginLogoutButtons();
         }
-        window.location.href = '../Home/Home.html';
+        window.location.href = '../index.html';
     });
 }
