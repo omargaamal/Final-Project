@@ -417,18 +417,7 @@ body {
 }
 
 @media (max-width: 767px) {
-    .section-title {
-        font-size: 35.2px;
-    }
-    .section-subtitle {
-        font-size: 28.8px;
-    }
-    .section-subheading {
-        font-size: 19.2px;
-    }
-    .product-card-small img {
-        height: 250px;
-    }
+  
     .footer .row {
         flex-direction: column;
         align-items: center;
@@ -461,4 +450,22 @@ body {
             padding: 12px 40px;
         }
     
+}
+@media (max-width: 320px) , (max-width: 480px) {
+    .form-register{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    .btn-dark-outline {
+        color: #000;
+        background-color: transparent;
+        border: 2px solid #000;
+        border-radius: 5px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        font-size: 16px;
+    padding: 20px 31px
+    }  
 }
